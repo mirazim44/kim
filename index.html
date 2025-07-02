@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: #002366;
+    }
+
+    .header .lang {
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 60px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .container h2 {
+      text-align: center;
+      color: #002366;
+      margin-bottom: 20px;
+    }
+
+    .switch-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+
+    .switch-buttons button {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f0f0f0;
+      cursor: pointer;
+    }
+
+    .switch-buttons button.active {
+      background: #002366;
+      color: white;
+      border: none;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .qr-link {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 5px;
+      color: #666;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #ff6f61;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    .offer {
+      text-align: right;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .offer a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    .eye-icon {
+      float: right;
+      margin-top: -30px;
+      margin-right: 10px;
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="logo">MARS<sup>®</sup></div>
+    <div class="lang">🌐 O'zb</div>
+  </div>
+
+  <div class="container">
+    <div class="offer">
+      <a href="#">Offerta imzolash 🔐</a>
+    </div>
+    <h2>Spacega xush kelibsiz</h2>
+
+    <div class="switch-buttons">
+      <button class="active">O'quvchiman</button>
+      <button>Ota-onaman</button>
+    </div>
+
+    <input type="text" placeholder="Modme ID yoki telefon raqam" />
+
+    <input type="password" id="password" placeholder="Password" />
+    <span class="eye-icon" onclick="togglePassword()">👁️</span>
+
+    <div class="qr-link">QR code orqali kirish</div>
+
+    <button class="submit-btn">Подтвердить</button>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+
+</body>
+</html>
